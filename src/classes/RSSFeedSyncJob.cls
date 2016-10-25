@@ -61,7 +61,7 @@ global class RSSFeedSyncJob implements Schedulable {
 				System.debug( item.GUID__c );
 			}
 			
-			upsert feedItemList;
+			upsert feedItemList GUID__c;
 			
 		}
 		

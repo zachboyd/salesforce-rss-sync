@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-    	<members>RSSFeedDownloadService</members>
-    	<members>RSSFeedDownloadServiceTest</members>
+        <members>RSSFeedDownloadService</members>
+        <members>RSSFeedDownloadServiceTest</members>
         <members>RSSFeedSyncJob</members>
         <members>RSSFeedSyncJobTest</members>
         <members>RSSFeedMockHttpCallout</members>
@@ -12,6 +12,10 @@
         <members>RSS_Feed__c</members>
         <members>RSS_Feed_Item__c</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>RSSFeedTrigger</members>
+        <name>ApexTrigger</name>
     </types>
     <version>37.0</version>
 </Package>

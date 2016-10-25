@@ -7,17 +7,19 @@ public class RSSFeedDownloadServiceTest {
 		// set http callout mock
 		Test.setMock( HttpCalloutMock.class, new RSSFeedMockHttpCallout() );
 	
-		String url = 'https://myawesomerssfeed.com/rss';
-			
 		Test.startTest();
 			
-		RSSFeedDownloadService.RSSFeed feed = RSSFeedDownloadService.downloadRSSFeed( url );
+		// Asert feed values	
+		
+		RSSFeedDownloadService.RSSFeed feed = RSSFeedDownloadService.downloadRSSFeed( RSSFeedMockHttpCallout.FEED_LINK );
 			
 		System.assert( feed != null, 'RSS feed should not be null' );
 
 		System.assertEquals( feed.title, RSSFeedMockHttpCallout.FEED_TITLE );
 		System.assertEquals( feed.link, RSSFeedMockHttpCallout.FEED_LINK );
 		System.assertEquals( feed.description, RSSFeedMockHttpCallout.FEED_DESCRIPTION );
+
+		// Assert item values
 
 		System.assert( feed.items != null, 'RSS feed items should not be null' );
 		System.assert( feed.items.size() == 1, 'RSS feed items size should be equal to 1' );

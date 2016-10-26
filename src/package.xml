@@ -17,5 +17,10 @@
         <members>RSSFeedTrigger</members>
         <name>ApexTrigger</name>
     </types>
+    <types>
+        <members>RSS_Feed__c</members>
+        <members>RSS_Feed_Item__c</members>
+        <name>CustomTab</name>
+    </types>
     <version>37.0</version>
 </Package>

@@ -61,12 +61,123 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Feed_Description_Key__c</fullName>
+        <defaultValue>&quot;description&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Feed Description Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feed_Link_Key__c</fullName>
+        <defaultValue>&quot;link&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Feed Link Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feed_Title_Key__c</fullName>
+        <defaultValue>&quot;title&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Key that should be used to set the title on the RSS Feed Item</inlineHelpText>
+        <label>Feed Title Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Description_Key__c</fullName>
+        <defaultValue>&quot;description&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Item Description Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_ID_Key__c</fullName>
+        <defaultValue>&quot;guid&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Key of the unique identifier in the feed that can be used to upsert the RSS Feed Item</inlineHelpText>
+        <label>Item ID Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Link_Key__c</fullName>
+        <defaultValue>&quot;link&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Item Link Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Title_Key__c</fullName>
+        <defaultValue>&quot;title&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Item Title Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sync_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Sync Schedule</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Standard</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sharepoint List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>URL__c</fullName>
         <externalId>false</externalId>
         <label>URL</label>
+        <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Url</type>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <label>RSS Feed</label>
     <listViews>
@@ -81,6 +192,26 @@
     <pluralLabel>RSS Feeds</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Cron_Schedule_Builder</fullName>
+        <availability>online</availability>
+        <description>Link to a helpful cron schedule builder</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Cron Schedule Builder</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.cronmaker.com/</url>
+    </webLinks>
     <webLinks>
         <fullName>Sync_Feed</fullName>
         <availability>online</availability>

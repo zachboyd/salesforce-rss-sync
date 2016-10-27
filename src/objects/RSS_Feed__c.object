@@ -129,6 +129,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Item_Published_Date_Key__c</fullName>
+        <defaultValue>&quot;pubDate&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Item Published Date Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Item_Title_Key__c</fullName>
         <defaultValue>&quot;title&quot;</defaultValue>
         <externalId>false</externalId>

@@ -82,6 +82,14 @@
         <type>Url</type>
     </fields>
     <fields>
+        <fullName>Published_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Published Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>RSS_Feed__c</fullName>
         <description>Parent RSS feed that this feed item belongs to</description>
         <externalId>false</externalId>

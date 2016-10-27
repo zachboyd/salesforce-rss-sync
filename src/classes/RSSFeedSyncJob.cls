@@ -30,8 +30,20 @@ global class RSSFeedSyncJob implements Schedulable {
 	
 	public static void syncFeed( RSS_Feed__c feed ) {
 		
+        RSSFeedDownloadService.RSSOptions options = new RSSFeedDownloadService.RSSOptions();
+        
+        // set options
+        options.feedType = feed.Type__c;
+        options.feedTitleKey = feed.Feed_Title_Key__c;
+        options.feedLinkKey = feed.Feed_Link_Key__c;
+        options.feedDescriptionKey = feed.Feed_Description_Key__c;
+        options.feedItemTitleKey = feed.Item_Title_Key__c;
+        options.feedItemLinkKey = feed.Item_Link_Key__c;
+        options.feedItemDescriptionKey = feed.Item_Description_Key__c;
+        options.feedItemIdKey = feed.Item_ID_Key__c;
+        
 		// download the RSS feed
-		RSSFeedDownloadService.RSSFeed downloadedFeed = RSSFeedDownloadService.downloadRSSFeed( feed.URL__c );
+		RSSFeedDownloadService.RSSFeed downloadedFeed = RSSFeedDownloadService.downloadRSSFeed( feed.URL__c, options );
 		
 		if( downloadedFeed != null ) {
 			
@@ -41,24 +53,22 @@ global class RSSFeedSyncJob implements Schedulable {
 			
 			for( RSSFeedDownloadService.RSSFeedItem downloadedItem : downloadedFeed.items ) {
 				
-				// the guid is the external id, but most RSS feeds use a url as the guid. This could
-				// exceed the 255 character limit so we will hash the string to make it unique
-				String hashedGuid = EncodingUtil.convertToHex( Crypto.generateDigest('SHA1',Blob.valueOf( downloadedItem.guid ) ) );
+				// TODO add support for parsing published date
+					
+				// Hash the id field just in case it is greater than 255. This should still allow for a unique value, assuming the
+				// key was unique to being with
+				String hashedId = EncodingUtil.convertToHex( Crypto.generateDigest( 'SHA1', Blob.valueOf( downloadedItem.id ) ) );								
 				
 				RSS_Feed_Item__c feedItem = new RSS_Feed_Item__c(
 					RSS_Feed__c = feed.Id,
 					Title__c = downloadedItem.title,
 					Description__c = downloadedItem.description,
 					Link__c = downloadedItem.link,
-					GUID__c = hashedGuid
+					GUID__c = hashedId			
 				);
 				
 				feedItemList.add( feedItem );
 				
-			}
-			
-			for( RSS_Feed_Item__c item : feedItemList ) {
-				System.debug( item.GUID__c );
 			}
 			
 			upsert feedItemList GUID__c;
@@ -74,8 +84,17 @@ global class RSSFeedSyncJob implements Schedulable {
 		
 		List<RSS_Feed__c> feedList = [
 			SELECT
-				Id, 
-				URL__c
+				Id,
+				URL__c,
+            	Sync_Schedule__c,
+            	Type__c,
+            	Feed_Title_Key__c,
+            	Feed_Description_Key__c,
+            	Feed_Link_Key__c,
+            	Item_ID_Key__c,
+            	Item_Title_Key__c,
+            	Item_Description_Key__c,
+            	Item_Link_Key__c
 			FROM
 				RSS_Feed__c
 			WHERE

@@ -34,5 +34,7 @@ public class RSSFeedDownloadServiceTest {
 		Test.stopTest();
 		
 	}
+    
+    // TODO add test case(s) with different RSS options
 	
 }

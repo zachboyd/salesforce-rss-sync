@@ -242,7 +242,8 @@ public class RSSFeedDownloadService {
 		
 		RSSFeed feed = new RSSFeed();
 		
-		// extract RSS channel and add channel items
+		// store base url from an attribute in the xml 
+		String baseUrl = '';
 		
 		for( DOM.XmlNode rootChild : rss.getChildren() ) {
 			
@@ -288,7 +289,27 @@ public class RSSFeedDownloadService {
 				}
 				
 			}
+			else if( rootChild.getName() == 'link' ) {
+				
+				// use the 'next' link to identify the domain that the items live on since the 
+				// url could have been using a Named Credential callout. This will allow us to link
+				// the item appropriately
+				
+				baseUrl = rootChild.getAttribute( 'href', '' );
+				
+				Url url = new Url( baseUrl );
+				
+				baseUrl = url.getProtocol() + '://' + url.getHost();
+				
+			}
 			
+		}
+		
+		// Loop through all items and update link appropriately. The sharepoint api will only return
+		// a relative url instead of a full url so we must prepend the base url
+		
+		for( RSSFeedItem item : feed.items ) {
+			item.link = baseUrl + item.link;
 		}
 		
 		return feed;

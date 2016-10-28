@@ -7,7 +7,7 @@ global class RSSFeedMockHttpCallout implements HttpCalloutMock {
     public static String ITEM_TITLE = 'RSS Tutorial';
     public static String ITEM_DESCRIPTION = 'New RSS tutorial on W3Schools';
     public static String ITEM_LINK = 'http://www.w3schools.com/xml/xml_rss.asp';
-    public static String ITEM_GUID = '1234';
+    public static String ITEM_ID = '1234';
     
     global HttpResponse respond( HttpRequest request ) {
     	

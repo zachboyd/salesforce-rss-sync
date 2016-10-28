@@ -29,7 +29,7 @@ public class RSSFeedDownloadServiceTest {
 		System.assertEquals( item.title, RSSFeedMockHttpCallout.ITEM_TITLE );
 		System.assertEquals( item.link, RSSFeedMockHttpCallout.ITEM_LINK );
 		System.assertEquals( item.description, RSSFeedMockHttpCallout.ITEM_DESCRIPTION );
-		System.assertEquals( item.guid, RSSFeedMockHttpCallout.ITEM_GUID );
+		System.assertEquals( item.id, RSSFeedMockHttpCallout.ITEM_ID );
 		
 		Test.stopTest();
 		

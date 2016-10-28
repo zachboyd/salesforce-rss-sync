@@ -35,5 +35,10 @@
         <members>RSS_Post_Item_to_Chatter_Process_Builder-1</members>
         <name>Flow</name>
     </types>
+    <types>
+        <members>RSS_Feed_Item__c-RSS Feed Item Layout</members>
+        <members>RSS_Feed__c-RSS Feed Layout</members>
+        <name>Layout</name>
+    </types>
     <version>37.0</version>
 </Package>

@@ -22,5 +22,18 @@
         <members>RSS_Feed_Item__c</members>
         <name>CustomTab</name>
     </types>
+    <types>
+        <members>RSS_Feeds</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>RSS_Feed_Admin</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>RSS_Post_Item_to_Chatter_Flow</members>
+        <members>RSS_Post_Item_to_Chatter_Process_Builder</members>
+        <name>Flow</name>
+    </types>
     <version>37.0</version>
 </Package>

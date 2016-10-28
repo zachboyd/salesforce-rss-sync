@@ -54,7 +54,7 @@ global class RSSFeedSyncJob implements Schedulable {
 			for( RSSFeedDownloadService.RSSFeedItem downloadedItem : downloadedFeed.items ) {
 				
 				// TODO add support for parsing published date
-					
+				
 				// Hash the id field just in case it is greater than 255. This should still allow for a unique value, assuming the
 				// key was unique to being with
 				String hashedId = EncodingUtil.convertToHex( Crypto.generateDigest( 'SHA1', Blob.valueOf( downloadedItem.id ) ) );								

@@ -31,8 +31,8 @@
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>RSS_Post_Item_to_Chatter_Flow</members>
-        <members>RSS_Post_Item_to_Chatter_Process_Builder</members>
+        <members>RSS_Post_Item_to_Chatter_Flow-1</members>
+        <members>RSS_Post_Item_to_Chatter_Process_Builder-1</members>
         <name>Flow</name>
     </types>
     <version>37.0</version>

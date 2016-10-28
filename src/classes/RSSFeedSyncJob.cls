@@ -55,15 +55,27 @@ global class RSSFeedSyncJob implements Schedulable {
 				
 				// TODO add support for parsing published date
 				
-				// Hash the id field just in case it is greater than 255. This should still allow for a unique value, assuming the
-				// key was unique to being with
-				String hashedId = EncodingUtil.convertToHex( Crypto.generateDigest( 'SHA1', Blob.valueOf( downloadedItem.id ) ) );								
+				// Concatenate all fields and hash to make a unique guid
+				// This is a hack since not all RSS feeds provide a valid GUID
+				String uniqueId = downloadedItem.title + downloadedItem.description + downloadedItem.link + downloadedItem.id;
+				String hashedId = EncodingUtil.convertToHex( Crypto.generateDigest( 'SHA1', Blob.valueOf( uniqueId ) ) );								
+				
+				// certain RSS feeds have an &apos; (Apostrophe) as the first character 
+				// in the url, i.e. status.salesforce.com
+				// This logic is being put in place to replace the first character if it is not an 'h'
+				String link = downloadedItem.link;
+				
+				if( String.isNotBlank( link ) ) {
+					if( link.indexOf( '\'' ) == 0 ) {
+						link = link.substring( 1, link.length() );
+					}
+				}
 				
 				RSS_Feed_Item__c feedItem = new RSS_Feed_Item__c(
 					RSS_Feed__c = feed.Id,
 					Title__c = downloadedItem.title,
 					Description__c = downloadedItem.description,
-					Link__c = downloadedItem.link,
+					Link__c = link,
 					GUID__c = hashedId			
 				);
 				

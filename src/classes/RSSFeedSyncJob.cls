@@ -97,6 +97,7 @@ global class RSSFeedSyncJob implements Schedulable {
 		List<RSS_Feed__c> feedList = [
 			SELECT
 				Id,
+				Active__c,
 				URL__c,
             	Sync_Schedule__c,
             	Type__c,

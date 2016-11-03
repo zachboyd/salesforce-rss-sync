@@ -3,42 +3,42 @@
     <types>
         <members>RSSFeedDownloadService</members>
         <members>RSSFeedDownloadServiceTest</members>
+        <members>RSSFeedMockHttpCallout</members>
         <members>RSSFeedSyncJob</members>
         <members>RSSFeedSyncJobTest</members>
-        <members>RSSFeedMockHttpCallout</members>
+        <members>RSSRescheduleInvocable</members>
+        <members>RSSScheduleAbortInvocable</members>
+        <members>RSSScheduleInvocable</members>
         <name>ApexClass</name>
-    </types>
-    <types>
-        <members>RSS_Feed__c</members>
-        <members>RSS_Feed_Item__c</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>RSSFeedTrigger</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>RSS_Feed__c</members>
-        <members>RSS_Feed_Item__c</members>
-        <name>CustomTab</name>
     </types>
     <types>
         <members>RSS_Feeds</members>
         <name>CustomApplication</name>
     </types>
     <types>
-        <members>RSS_Feed_Admin</members>
-        <name>PermissionSet</name>
+        <members>RSS_Feed_Item__c</members>
+        <members>RSS_Feed__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>RSS_Feed_Item__c</members>
+        <members>RSS_Feed__c</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>RSS_Post_Item_to_Chatter_Flow-1</members>
         <members>RSS_Post_Item_to_Chatter_Process_Builder-1</members>
+        <members>RSS_Schedule_Jobs-1</members>
         <name>Flow</name>
     </types>
     <types>
         <members>RSS_Feed_Item__c-RSS Feed Item Layout</members>
         <members>RSS_Feed__c-RSS Feed Layout</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>RSS_Feed_Admin</members>
+        <name>PermissionSet</name>
     </types>
     <version>37.0</version>
 </Package>

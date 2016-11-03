@@ -184,6 +184,16 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Type__c</fullName>
         <externalId>false</externalId>
         <label>Type</label>
@@ -220,8 +230,9 @@
         <label>All</label>
     </listViews>
     <nameField>
+        <displayFormat>RSS-{0000}</displayFormat>
         <label>Name</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>RSS Feeds</pluralLabel>
     <searchLayouts/>

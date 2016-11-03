@@ -24,6 +24,18 @@
         <apexClass>RSSFeedSyncJobTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>RSSRescheduleInvocable</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>RSSScheduleAbortInvocable</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>RSSScheduleInvocable</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <description>Admin permission set to manage RSS feeds</description>
     <fieldPermissions>
         <editable>true</editable>
@@ -109,6 +121,11 @@
         <editable>true</editable>
         <field>RSS_Feed__c.Sync_to_Chatter__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>RSS_Feed__c.Title__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

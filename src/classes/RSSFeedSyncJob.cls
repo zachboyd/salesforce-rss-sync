@@ -62,7 +62,7 @@ global class RSSFeedSyncJob implements Schedulable {
 				
 				// certain RSS feeds have an &apos; (Apostrophe) as the first character 
 				// in the url, i.e. status.salesforce.com
-				// This logic is being put in place to replace the first character if it is not an 'h'
+				// This logic is being put in place to replace the first character if it is an '
 				String link = downloadedItem.link;
 				
 				if( String.isNotBlank( link ) ) {

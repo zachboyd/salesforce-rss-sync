@@ -27,10 +27,16 @@
         <name>CustomTab</name>
     </types>
     <types>
-        <members>RSS_Post_Item_to_Chatter_Flow-1</members>
-        <members>RSS_Post_Item_to_Chatter_Process_Builder-1</members>
         <members>RSS_Schedule_Jobs-1</members>
+        <members>RSS_Post_Item_to_Chatter_Process_Builder-4</members>
+        <members>RSS_Post_Item_to_Chatter_Flow-2</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>RSS_Schedule_Jobs</members>
+        <members>RSS_Post_Item_to_Chatter_Process_Builder</members>
+        <members>RSS_Post_Item_to_Chatter_Flow</members>
+        <name>FlowDefinition</name>
     </types>
     <types>
         <members>RSS_Feed_Item__c-RSS Feed Item Layout</members>

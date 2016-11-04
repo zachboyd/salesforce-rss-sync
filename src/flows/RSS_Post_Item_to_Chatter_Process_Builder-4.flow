@@ -53,12 +53,12 @@
             <processMetadataValues>
                 <name>rightHandSideType</name>
                 <value>
-                    <stringValue>Reference</stringValue>
+                    <stringValue>Formula</stringValue>
                 </value>
             </processMetadataValues>
             <name>varBody</name>
             <value>
-                <elementReference>myVariable_current.Description__c</elementReference>
+                <elementReference>formula_2_myRule_1_A1_varBody</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -256,7 +256,18 @@
             <label>Sync to Chatter?</label>
         </rules>
     </decisions>
-    <interviewLabel>RSS_Post_Item_to_Chatter_Process_Builder-_RSS_Feed_Item__c</interviewLabel>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;&lt;b&gt;&quot; + [RSS_Feed_Item__c].RSS_Feed__c.Title__c + &quot;&lt;/b&gt;&quot; + &quot;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&quot; + [RSS_Feed_Item__c].Description__c </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A1_varBody</name>
+        <dataType>String</dataType>
+        <expression>&quot;&lt;b&gt;&quot; + {!myVariable_current.RSS_Feed__c.Title__c} + &quot;&lt;/b&gt;&quot; + &quot;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&quot; + {!myVariable_current.Description__c}</expression>
+    </formulas>
+    <interviewLabel>RSS_Post_Item_to_Chatter_Process_Builder-4_RSS_Feed_Item__c</interviewLabel>
     <label>RSS - Post Item to Chatter Process Builder</label>
     <processMetadataValues>
         <name>ObjectType</name>

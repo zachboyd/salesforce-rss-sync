@@ -20,6 +20,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>IsRichText</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>LinkUrl</field>
             <value>
                 <elementReference>varLinkEncoded</elementReference>

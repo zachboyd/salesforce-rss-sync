@@ -56,7 +56,7 @@ public class RSSScheduleInvocable {
                     String jobId = System.schedule(
                         record.name,
                         record.sync_schedule__c,
-                        new RSSFeedSyncJob( record.id )
+                        new RSSFeedSyncSchedulableJob( record.id )
                     );
 
                     jobIds.add( jobId );

@@ -25,6 +25,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>RSSFeedSyncSchedulableJob</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>RSSRescheduleInvocable</apexClass>
         <enabled>false</enabled>
     </classAccesses>

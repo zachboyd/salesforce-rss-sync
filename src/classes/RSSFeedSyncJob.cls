@@ -1,14 +1,14 @@
-global class RSSFeedSyncJob implements Schedulable {
+global class RSSFeedSyncJob implements Queueable, Database.AllowsCallouts {
 	
 	private Id recordId;
 	
 	public RSSFeedSyncJob( Id recordId ) {
 		this.recordId = recordId;
 	}
-	
-	public void execute( SchedulableContext context ) {
 		
-		// get the rss feed
+    public void execute( QueueableContext context ) {
+        
+        // get the rss feed
 		RSS_Feed__c feed = getRSSFeed( this.recordId );
 		
 		if( feed != null ) {
@@ -18,8 +18,8 @@ global class RSSFeedSyncJob implements Schedulable {
 			}
 			
 		}
-		
-	}
+        
+    }
 	
 	/**
 	* Helper webservice method invoked by custom button

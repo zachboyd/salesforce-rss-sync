@@ -9,6 +9,7 @@
         <members>RSSRescheduleInvocable</members>
         <members>RSSScheduleAbortInvocable</members>
         <members>RSSScheduleInvocable</members>
+        <members>RSSFeedSyncSchedulableJob</members>
         <name>ApexClass</name>
     </types>
     <types>

@@ -1,4 +1,4 @@
-public class RSSFeedDownloadService {
+global class RSSFeedDownloadService {
 	
 	public class RSSFeed {
 		
@@ -57,11 +57,11 @@ public class RSSFeedDownloadService {
         }
 		
 	}
-	
+    
 	public static RSSFeed downloadRSSFeed( String url ) {
 		return downloadRSSFeed( url, new RSSOptions() );
 	}
-	
+        	
 	public static RSSFeed downloadRSSFeed( String url, RSSOptions options ) {
 	
 		Http http = new Http();

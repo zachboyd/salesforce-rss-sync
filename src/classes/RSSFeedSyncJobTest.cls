@@ -8,11 +8,18 @@ public class RSSFeedSyncJobTest {
 		
 		// set http callout mock
 		Test.setMock( HttpCalloutMock.class, new RSSFeedMockHttpCallout( httpResponse ) );
+	
+		RSS_Feed__c feed = new RSS_Feed__c(
+			Title__c = 'My Test RSS Feed',
+			URL__c = 'http://myrandomurlfortestcase.org',
+			Active__c = true,
+			Sync_Schedule__c = '0 0 * * * ?'
+		);
 		
+		insert feed;
+			
 		Test.startTest();
 		
-		RSS_Feed__c feed = createRssFeed();
-		 
 		// sync the feed
 		RSSFeedSyncJob.syncFeed( feed );
 		
@@ -26,19 +33,4 @@ public class RSSFeedSyncJobTest {
 		
 	}
 	
-	private static RSS_Feed__c createRssFeed() {
-		
-		RSS_Feed__c feed = new RSS_Feed__c(
-			Title__c = 'My Test RSS Feed',
-			URL__c = 'http://myrandomurlfortestcase.org',
-			Active__c = true,
-			Sync_Schedule__c = '0 0 * * * ?'
-		);
-		
-		insert feed;
-		
-		return feed;
-		
-	}
-
 }

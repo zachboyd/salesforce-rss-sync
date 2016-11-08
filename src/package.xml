@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>RSSFeedDownloadService</members>
-        <members>RSSFeedDownloadServiceTest</members>
         <members>RSSFeedMockHttpCallout</members>
         <members>RSSFeedSyncJob</members>
         <members>RSSFeedSyncJobTest</members>
+        <members>RSSFeedSyncSchedulableJob</members>
         <members>RSSRescheduleInvocable</members>
         <members>RSSScheduleAbortInvocable</members>
         <members>RSSScheduleInvocable</members>
-        <members>RSSFeedSyncSchedulableJob</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -27,15 +26,15 @@
         <name>CustomTab</name>
     </types>
     <types>
-        <members>RSS_Schedule_Jobs-1</members>
-        <members>RSS_Post_Item_to_Chatter_Process_Builder-4</members>
         <members>RSS_Post_Item_to_Chatter_Flow-2</members>
+        <members>RSS_Post_Item_to_Chatter_Process_Builder-4</members>
+        <members>RSS_Schedule_Jobs-1</members>
         <name>Flow</name>
     </types>
     <types>
-        <members>RSS_Schedule_Jobs</members>
-        <members>RSS_Post_Item_to_Chatter_Process_Builder</members>
         <members>RSS_Post_Item_to_Chatter_Flow</members>
+        <members>RSS_Post_Item_to_Chatter_Process_Builder</members>
+        <members>RSS_Schedule_Jobs</members>
         <name>FlowDefinition</name>
     </types>
     <types>

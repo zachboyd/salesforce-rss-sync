@@ -1,16 +1,18 @@
-@IsTest
+@isTest
 public class RSSFeedSyncJobTest {
 
-	@IsTest
+	@isTest
 	static void testRSSFeedSync() {
 		
+		String httpResponse = '<?xml version="1.0" encoding="UTF-8" ?> <rss version="2.0"> <channel> <title>W3Schools Home Page</title> <link>http://www.w3schools.com</link> <description>Free web building tutorials</description> <item> <title>RSS Tutorial</title> <link>http://www.w3schools.com/xml/xml_rss.asp</link> <description>New RSS tutorial on W3Schools</description> <guid>1234</guid> </item> </channel> </rss>';
+		
 		// set http callout mock
-		Test.setMock( HttpCalloutMock.class, new RSSFeedMockHttpCallout() );
+		Test.setMock( HttpCalloutMock.class, new RSSFeedMockHttpCallout( httpResponse ) );
+		
+		Test.startTest();
 		
 		RSS_Feed__c feed = createRssFeed();
 		 
-		Test.startTest();
-		
 		// sync the feed
 		RSSFeedSyncJob.syncFeed( feed );
 		
@@ -27,9 +29,10 @@ public class RSSFeedSyncJobTest {
 	private static RSS_Feed__c createRssFeed() {
 		
 		RSS_Feed__c feed = new RSS_Feed__c(
-			Name = RSSFeedMockHttpCallout.FEED_TITLE,
-			URL__c = RSSFeedMockHttpCallout.FEED_LINK,
-			Active__c = true
+			Title__c = 'My Test RSS Feed',
+			URL__c = 'http://myrandomurlfortestcase.org',
+			Active__c = true,
+			Sync_Schedule__c = '0 0 * * * ?'
 		);
 		
 		insert feed;

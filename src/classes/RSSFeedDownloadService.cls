@@ -42,7 +42,7 @@ global class RSSFeedDownloadService {
             
             // set default values
             
-            feedType = 'Standard';
+            feedType = FEED_TYPE_STANDARD;
              
             feedTitleKey = 'title';
             feedLinkKey = 'link';
@@ -57,6 +57,9 @@ global class RSSFeedDownloadService {
         }
 		
 	}
+	
+	public static string FEED_TYPE_STANDARD = 'Standard';
+	public static string FEED_TYPE_SHAREPOINT_LIST = 'Sharepoint List';
     
 	public static RSSFeed downloadRSSFeed( String url ) {
 		return downloadRSSFeed( url, new RSSOptions() );
@@ -77,7 +80,7 @@ global class RSSFeedDownloadService {
 		HttpResponse response = http.send( request );
         
         // check feed type and invoke correct parser
-        if( options.feedType == 'Sharepoint List' ) {
+        if( options.feedType == FEED_TYPE_SHAREPOINT_LIST ) {
             return parseSharepointList( response.getBodyDocument(), options );
         }
 		

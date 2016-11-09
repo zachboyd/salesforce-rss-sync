@@ -258,6 +258,13 @@
         <searchResultsAdditionalFields>URL__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Require_Chatter_Feed_ID</fullName>
+        <active>true</active>
+        <description>Require Chatter Feed ID if Sync to Chatter is checked</description>
+        <errorConditionFormula>Sync_to_Chatter__c  = TRUE &amp;&amp; ISBLANK( Chatter_Feed_ID__c )</errorConditionFormula>
+        <errorMessage>A Chatter Feed ID is required when Sync to Chatter is enabled</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>Cron_Schedule_Builder</fullName>
         <availability>online</availability>

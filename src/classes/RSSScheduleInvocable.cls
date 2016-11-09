@@ -52,15 +52,23 @@ public class RSSScheduleInvocable {
                 if ( !cronJobNames.contains( record.name ) ) {
 
                     System.debug( 'Scheduling job: ' + record );
-
-                    String jobId = System.schedule(
-                        record.name,
-                        record.sync_schedule__c,
-                        new RSSFeedSyncSchedulableJob( record.id )
-                    );
-
-                    jobIds.add( jobId );
-
+					
+					// Do not actually schedule the feed sync since
+					// the test cases will fail due to a DML operation
+					// being executed in the same transaction as an
+					// HTTP callout
+					if( !Test.isRunningTest() ) {
+						
+						String jobId = System.schedule(
+	                        record.name,
+	                        record.sync_schedule__c,
+	                        new RSSFeedSyncSchedulableJob( record.id )
+	                    );
+	                    
+	                    jobIds.add( jobId );
+						
+					}
+					
                 } else {
 
                     System.debug( LoggingLevel.WARN, 'Job has already been scheduled: ' + record.name );

@@ -2,6 +2,8 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultLandingTab>standard-home</defaultLandingTab>
     <label>RSS Feeds</label>
+    <tab>standard-Chatter</tab>
     <tab>RSS_Feed__c</tab>
     <tab>RSS_Feed_Item__c</tab>
+    <tab>standard-report</tab>
 </CustomApplication>

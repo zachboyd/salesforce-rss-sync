@@ -120,6 +120,9 @@
     <label>RSS Feed Item</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RSS_Feed__c</columns>
+        <columns>Title__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -129,6 +132,18 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>RSS Feed Items</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>RSS_Feed__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Title__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RSS_Feed__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Title__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RSS_Feed__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Title__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>RSS_Feed__c</searchFilterFields>
+        <searchFilterFields>Title__c</searchFilterFields>
+        <searchResultsAdditionalFields>RSS_Feed__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Title__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

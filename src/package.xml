@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>RSSFeedDownloadService</members>
@@ -28,7 +28,7 @@
     <types>
         <members>RSS_Post_Item_to_Chatter_Flow-2</members>
         <members>RSS_Post_Item_to_Chatter_Process_Builder-4</members>
-        <members>RSS_Schedule_Jobs-1</members>
+        <members>RSS_Schedule_Jobs-3</members>
         <name>Flow</name>
     </types>
     <types>

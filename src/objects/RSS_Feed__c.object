@@ -68,6 +68,7 @@
         <fullName>Chatter_Feed_ID__c</fullName>
         <description>ID of Chatter Group or any record that has feed tracking enabled</description>
         <externalId>false</externalId>
+        <inlineHelpText>ID of Chatter Group or any record that has feed tracking enabled</inlineHelpText>
         <label>Chatter Feed ID</label>
         <length>255</length>
         <required>false</required>
@@ -193,7 +194,9 @@
     <fields>
         <fullName>Sync_to_Chatter__c</fullName>
         <defaultValue>false</defaultValue>
+        <description>If enabled then all feed items will be automatically posted to a Chatter</description>
         <externalId>false</externalId>
+        <inlineHelpText>If enabled then all feed items will be automatically posted to a Chatter</inlineHelpText>
         <label>Sync to Chatter</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>

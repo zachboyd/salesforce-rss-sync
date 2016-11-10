@@ -76,6 +76,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Chatter_Post_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The Chatter post will be created by this user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Chatter post will be created by this user</inlineHelpText>
+        <label>Chatter Post User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RSS_Feeds</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Feed_Description_Key__c</fullName>
         <defaultValue>&quot;description&quot;</defaultValue>
         <externalId>false</externalId>
@@ -167,7 +180,9 @@
     </fields>
     <fields>
         <fullName>Sync_Schedule__c</fullName>
+        <description>Cron schedule that should be used to automatically sync this feed. In &quot;Custom Links&quot;, you will find an external site that will allow you to easily build a Cron expression.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Cron schedule that should be used to automatically sync this feed. In &quot;Custom Links&quot;, you will find an external site that will allow you to easily build a Cron expression.</inlineHelpText>
         <label>Sync Schedule</label>
         <length>255</length>
         <required>false</required>
@@ -215,13 +230,14 @@
     </fields>
     <fields>
         <fullName>URL__c</fullName>
+        <description>URL of feed. This is configured as a text area instead of a URL since this can also be used to make authenticated calls using a callout.</description>
         <externalId>false</externalId>
+        <inlineHelpText>URL of feed. This is configured as a text area instead of a URL since this can also be used to make authenticated calls using a callout.</inlineHelpText>
         <label>URL</label>
-        <length>255</length>
-        <required>false</required>
+        <length>10000</length>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <label>RSS Feed</label>
     <listViews>

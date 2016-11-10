@@ -20,6 +20,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>CreatedById</field>
+            <value>
+                <elementReference>varChatterPostUserID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>IsRichText</field>
             <value>
                 <booleanValue>true</booleanValue>
@@ -55,6 +61,13 @@
     <variables>
         <description>Body of Chatter post</description>
         <name>varBody</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varChatterPostUserID</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>

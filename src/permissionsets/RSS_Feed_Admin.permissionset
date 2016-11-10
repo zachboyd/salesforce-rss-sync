@@ -74,6 +74,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>RSS_Feed__c.Chatter_Post_User__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>RSS_Feed__c.Feed_Description_Key__c</field>
         <readable>true</readable>
     </fieldPermissions>

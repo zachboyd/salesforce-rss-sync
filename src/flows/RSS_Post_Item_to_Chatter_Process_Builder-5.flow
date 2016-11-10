@@ -187,6 +187,48 @@
                 <elementReference>myVariable_current.Title__c</elementReference>
             </value>
         </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varChatterPostUserID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varChatterPostUserID</name>
+            <value>
+                <elementReference>myVariable_current.RSS_Feed__r.Chatter_Post_User__r.Id</elementReference>
+            </value>
+        </inputParameters>
     </actionCalls>
     <assignments>
         <name>myVariable_waitStartTimeAssignment</name>
@@ -267,7 +309,7 @@
         <dataType>String</dataType>
         <expression>&quot;&lt;b&gt;&quot; + {!myVariable_current.RSS_Feed__c.Title__c} + &quot;&lt;/b&gt;&quot; + &quot;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&quot; + {!myVariable_current.Description__c}</expression>
     </formulas>
-    <interviewLabel>RSS_Post_Item_to_Chatter_Process_Builder-4_RSS_Feed_Item__c</interviewLabel>
+    <interviewLabel>RSS_Post_Item_to_Chatter_Process_Builder-5_RSS_Feed_Item__c</interviewLabel>
     <label>RSS - Post Item to Chatter Process Builder</label>
     <processMetadataValues>
         <name>ObjectType</name>

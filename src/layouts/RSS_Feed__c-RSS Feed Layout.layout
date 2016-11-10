@@ -90,12 +90,12 @@
                 <behavior>Edit</behavior>
                 <field>Sync_to_Chatter__c</field>
             </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Chatter_Feed_ID__c</field>
             </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Chatter_Post_User__c</field>

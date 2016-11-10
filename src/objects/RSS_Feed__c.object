@@ -281,6 +281,13 @@
         <errorConditionFormula>Sync_to_Chatter__c  = TRUE &amp;&amp; ISBLANK( Chatter_Feed_ID__c )</errorConditionFormula>
         <errorMessage>A Chatter Feed ID is required when Sync to Chatter is enabled</errorMessage>
     </validationRules>
+    <validationRules>
+        <fullName>Require_Chatter_Post_User</fullName>
+        <active>true</active>
+        <description>Require Chatter Post User if Sync to Chatter is checked</description>
+        <errorConditionFormula>Sync_to_Chatter__c = TRUE &amp;&amp; ISBLANK( Chatter_Post_User__c )</errorConditionFormula>
+        <errorMessage>A Chatter Post User is required when Sync to Chatter is enabled</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>Cron_Schedule_Builder</fullName>
         <availability>online</availability>

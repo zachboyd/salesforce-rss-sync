@@ -51,8 +51,8 @@
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableReports>false</enableReports>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
@@ -61,6 +61,7 @@
         <defaultValue>true</defaultValue>
         <externalId>false</externalId>
         <label>Active</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -72,6 +73,7 @@
         <label>Chatter Feed ID</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -86,6 +88,7 @@
         <referenceTo>User</referenceTo>
         <relationshipName>RSS_Feeds</relationshipName>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -96,6 +99,7 @@
         <label>Feed Description Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -107,6 +111,7 @@
         <label>Feed Link Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -119,6 +124,7 @@
         <label>Feed Title Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -130,6 +136,7 @@
         <label>Item Description Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -142,6 +149,7 @@
         <label>Item ID Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -153,6 +161,7 @@
         <label>Item Link Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -164,6 +173,7 @@
         <label>Item Published Date Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -175,6 +185,7 @@
         <label>Item Title Key</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -187,6 +198,7 @@
         <label>Sync Schedule</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -198,6 +210,7 @@
         <externalId>false</externalId>
         <inlineHelpText>If enabled then all feed items will be automatically posted to a Chatter</inlineHelpText>
         <label>Sync to Chatter</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -207,6 +220,7 @@
         <label>Title</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -228,6 +242,7 @@
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -238,6 +253,7 @@
         <inlineHelpText>URL of feed. This is configured as a text area instead of a URL since this can also be used to make authenticated calls using a callout.</inlineHelpText>
         <label>URL</label>
         <length>10000</length>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
@@ -255,6 +271,7 @@
     <nameField>
         <displayFormat>RSS-{0000}</displayFormat>
         <label>Name</label>
+        <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>RSS Feeds</pluralLabel>

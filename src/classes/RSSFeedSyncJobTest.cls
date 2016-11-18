@@ -2,7 +2,7 @@
 public class RSSFeedSyncJobTest {
 
 	@IsTest
-	static void testRSSFeedDownload() {
+	static void test_rss_feed_download() {
 		
 		// The RSS sample was taken from http://www.w3schools.com/xml/xml_rss.asp and modified
     	// to only include one item
@@ -40,7 +40,7 @@ public class RSSFeedSyncJobTest {
 	}
 	
 	@IsTest
-	static void testRSSFeedDownloadWithOptions() {
+	static void test_rss_feed_download_with_options() {
 		
 		// The RSS sample was taken from http://www.w3schools.com/xml/xml_rss.asp and modified
     	// to only include one item
@@ -93,7 +93,7 @@ public class RSSFeedSyncJobTest {
 	}
 	
 	@IsTest
-	static void testSharepointListDownloadWithOptions() {
+	static void test_sharepoint_list_download_with_options() {
 		
 		// The RSS sample was taken from http://www.w3schools.com/xml/xml_rss.asp and modified
     	// to only include one item

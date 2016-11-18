@@ -66,10 +66,17 @@ global class RSSFeedSyncJob implements Queueable, Database.AllowsCallouts {
 				String link = downloadedItem.link;
 				
 				if( String.isNotBlank( link ) ) {
-					if( link.indexOf( '\'' ) == 0 ) {
+					
+                    if( link.indexOf( '\'' ) == 0 ) {
 						link = link.substring( 1, link.length() );
 					}
-				}
+                    
+                    // guarantee that link is url encoded. Start by decoding url which should be original
+                    // even if it wasn't encoded and then re-encode
+                    link = EncodingUtil.urlDecode( link, 'UTF-8' );
+                    link = EncodingUtil.urlEncode( link, 'UTF-8' );
+                    
+				}              
 				
 				RSS_Feed_Item__c feedItem = new RSS_Feed_Item__c(
 					RSS_Feed__c = feed.Id,

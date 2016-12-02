@@ -70,6 +70,15 @@ global class RSSFeedSyncJob implements Queueable, Database.AllowsCallouts {
                     if( link.indexOf( '\'' ) == 0 ) {
 						link = link.substring( 1, link.length() );
 					}
+					
+                    // replace characters with proper encoding for link                   
+                    // this list should be expanded, but right now it handles
+                    // random issues that were encountered in testing
+                    
+					link = link.replaceAll( ' ', '%20' );
+                    link = link.replaceAll( '®', '%C2%AE' );
+                    link = link.replaceAll( '‘', '%E2%80%98' );
+                    link = link.replaceAll( '’', '%E2%80%99' );
                     
 				}              
 				
